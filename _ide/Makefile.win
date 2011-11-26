@@ -1,0 +1,45 @@
+# Project: adlock
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = ../src/adlock.o ../src/usage.o ../src/double.o ../src/char.o ../src/float.o ../src/int.o $(RES)
+LINKOBJ  = ../src/adlock.o ../src/usage.o ../src/double.o ../src/char.o ../src/float.o ../src/int.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = adlock.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before adlock.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "adlock.exe" $(LIBS)
+
+../src/adlock.o: ../src/adlock.cpp
+	$(CPP) -c ../src/adlock.cpp -o ../src/adlock.o $(CXXFLAGS)
+
+../src/usage.o: ../src/usage.cpp
+	$(CPP) -c ../src/usage.cpp -o ../src/usage.o $(CXXFLAGS)
+
+../src/double.o: ../src/double.cpp
+	$(CPP) -c ../src/double.cpp -o ../src/double.o $(CXXFLAGS)
+
+../src/char.o: ../src/char.cpp
+	$(CPP) -c ../src/char.cpp -o ../src/char.o $(CXXFLAGS)
+
+../src/float.o: ../src/float.cpp
+	$(CPP) -c ../src/float.cpp -o ../src/float.o $(CXXFLAGS)
+
+../src/int.o: ../src/int.cpp
+	$(CPP) -c ../src/int.cpp -o ../src/int.o $(CXXFLAGS)
