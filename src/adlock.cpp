@@ -13,21 +13,6 @@ Instead of a legal notice here is a blessing:
 */
 
 #include <cstdlib>
-/*
-
-The author (KryptonX) distributes this software and source code without any legal restrictions.
-You may modify and/or re-use it freely, even for commercial use.
-No mention of the author is required at any time.
-
-Instead of a legal notice here is a blessing:
-
-- May you use this software for great good
-- May you apply the same good will to your software
-- Have fun!
-
-*/
-
-
 #include <iostream>
 #include <string>
 #include "include/adlock.h"
